@@ -11,10 +11,13 @@
         </div>
 
         {% for el in articles %}
-        <div class="col-12 text-center">
-            <h3>{{ el.title }}</h3><br>
-            <h5>{{ el.intro }}</h5><br>
-            {{ el.text }}
+        <div class="alert alert-warning">
+            <div class="col-12 text-center">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.intro }}</p>
+            </div>
+            <p><b>Дата: {{ el.date.date() }}</b></p>
+            <button class="btn btn-danger">Детально</button>
         </div>
         {% endfor %}
 
