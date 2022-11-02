@@ -17,7 +17,7 @@
                 <p>{{ el.intro }}</p>
             </div>
             <p><b>Дата: {{ el.date.date() }}</b></p>
-            <button class="btn btn-danger">Детально</button>
+            <a class="btn btn-danger" href="/posts/{{ el.id }}">Детально</a>
         </div>
         {% endfor %}
 
