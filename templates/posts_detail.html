@@ -11,6 +11,8 @@
         <div class="alert alert-light">
             <p>{{ article.text }}</p>
             <p><b>{{ article.date.date() }}</b></p>
+            <a class="btn btn-danger" href="/posts/{{ article.id }}/delete">Удаление статьи</a>
+            <a class="btn btn-warning" href="/posts/{{ article.id }}/update">Редактирование статьи</a>
         </div>
     </div>
 </div>
