@@ -10,16 +10,20 @@
             <h1>Технологии</h1><br><br>
         </div>
 
-        {% for el in articles %}
-        <div class="alert alert-warning">
-            <div class="col-12 text-center">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.intro }}</p>
+        {% if articles|length > 0 %}
+            {% for el in articles %}
+            <div class="alert alert-warning">
+                <div class="col-12 text-center">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.intro }}</p>
+                </div>
+                <p><b>Дата: {{ el.date.date() }}</b></p>
+                <a class="btn btn-danger" href="/posts/{{ el.id }}">Детально</a>
             </div>
-            <p><b>Дата: {{ el.date.date() }}</b></p>
-            <a class="btn btn-danger" href="/posts/{{ el.id }}">Детально</a>
-        </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <p>Пока отсутствуют описания технологий</p>
+        {% endif %}
 
     </div>
 {% endblock %}
